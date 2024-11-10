@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Access Hugging Face API token from Streamlit secrets
-api_token = st.secrets["HF_ACCESS_TOKEN"]["api_token"]
+api_token = st.secrets["HF_ACCESS_TOKEN"]
 
 # A list of models that the user can choose from
 models = {
