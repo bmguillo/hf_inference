@@ -6,10 +6,10 @@ api_token = st.secrets["huggingface"]["api_token"]
 
 # A list of models that the user can choose from
 models = {
-    "LLaMA 3B Instruct": "meta-llama/Llama-3B-Instruct",  # Replace with actual model paths if necessary
-    "GPT-2": "gpt2",
-    "GPT-Neo 1.3B": "EleutherAI/gpt-neo-1.3B",
-    "DistilGPT-2": "distilgpt2"
+    "LLaMA": "meta-llama/Llama-3.2-3B-Instruct",  # Replace with actual model paths if necessary
+    "Granite": "meta-llama/Llama-3.2-3B-Instruct",
+    "Mistral": "mistralai/Mistral-7B-Instruct-v0.3"
+   
 }
 
 # Function to call the Hugging Face Inference API
