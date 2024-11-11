@@ -50,7 +50,7 @@ model_choice = st.selectbox("Select a model", list(models.keys()))
 input_prompt = st.text_area("Enter your prompt:", "What are the health benefits of drinking water?")
 
 # Slider to control max tokens (max_length)
-max_tokens = st.slider("Max tokens", min_value=50, max_value=1000, value=150, step=50)
+max_tokens = st.slider("Max tokens", min_value=50, max_value=7000, value=150, step=100)
 
 # When the user submits, generate the response
 if st.button("Generate Response"):
