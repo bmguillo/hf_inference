@@ -1,4 +1,6 @@
 import streamlit as st
+from transformers import AutoTokenizer
+from huggingface_hub import InferenceClient
 import requests
 
 # Access Hugging Face API token from Streamlit secrets
@@ -24,6 +26,7 @@ def generate_response(model_name, input_text):
         "inputs": input_text,
         "parameters": {
             "max_length": 150,
+            "max_new_tokens": 500,
             "temperature": 0.7,
             "top_p": 0.9,
             "top_k": 50
@@ -49,9 +52,6 @@ model_choice = st.selectbox("Select a model", list(models.keys()))
 # Text input for the prompt
 input_prompt = st.text_area("Enter your prompt:", "What are the health benefits of drinking water?")
 
-# Slider to control max tokens (max_length)
-#max_tokens = st.slider("Max tokens", min_value=50, max_value=7000, value=150, step=100)
-max_new_tokens = st.slider("Max new tokens", min_value=50, max_value=1000, value=150, step=50)
 
 # When the user submits, generate the response
 if st.button("Generate Response"):
