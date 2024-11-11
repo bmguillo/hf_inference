@@ -1,6 +1,6 @@
 import streamlit as st
-from transformers import AutoTokenizer
-from huggingface_hub import InferenceClient
+#from transformers import AutoTokenizer
+#from huggingface_hub import InferenceClient
 import requests
 
 # Access Hugging Face API token from Streamlit secrets
