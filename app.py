@@ -9,7 +9,7 @@ api_token = st.secrets["HF_ACCESS_TOKEN"]
 # A list of models that the user can choose from
 models = {
     "LLaMA": "meta-llama/Llama-3.2-3B-Instruct",  # Replace with actual model paths if necessary
-    "Granite": "ibm-granite/granite-3.0-8b-instruct",
+    "Granite": "ibm-granite/granite-3.0-2b-instruct",
    # "Mistral": "mistralai/Mistral-7B-Instruct-v0.3"
     "Mistral":  "mistralai/Mixtral-8x7B-Instruct-v0.1" 
 }
