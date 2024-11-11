@@ -25,8 +25,9 @@ def generate_response(model_name, input_text):
     payload = {
         "inputs": input_text,
         "parameters": {
+            "decoding_method": "greedy",
             "max_length": 150,
-            "max_new_tokens": 500,
+            "max_new_tokens": 1000,
             "temperature": 0.7,
             "top_p": 0.9,
             "top_k": 50
